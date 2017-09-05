@@ -4,6 +4,7 @@ import {HeroService} from '../../services/hero.service';
 
 @Component({
   selector: 'my-heroes',
+  styleUrls: ['./heroes.component.css'],
   template: `
   <h2>My Heroes</h2>
   <ul class="heroes">
@@ -22,7 +23,9 @@ export class HeroesComponent implements OnInit {
   selectedHero: Hero;
   HEROES: Hero[];
 
-  constructor(private heroService: HeroService){}
+  constructor(
+    private heroService: HeroService
+  ){}
 
   ngOnInit(): void {
     this.getHeroes();

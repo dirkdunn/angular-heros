@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 // Components
 import { AppComponent } from './app.component';
@@ -21,6 +21,10 @@ const routerModule = RouterModule.forRoot([
   {
     path: 'dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'detail/:id',
+    component: HeroDetailComponent
   },
   {
      path: ''
@@ -44,6 +48,6 @@ const routerModule = RouterModule.forRoot([
   providers: [
     HeroService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
